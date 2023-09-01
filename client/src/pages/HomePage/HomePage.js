@@ -12,6 +12,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { makeStyles } from "@mui/styles";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ChatCard from "../../components/ChatCard/ChatCard";
+import Messaging from "../../components/Messaging/Messaging";
 
 const useStyles = makeStyles((theme) => ({
   searchField: {
@@ -44,7 +45,7 @@ function HomePage() {
     <Box>
       <Grid container>
         {/* Left */}
-        <Grid item lg={4} height={"100vh"}>
+        <Grid item lg={4}>
           <Grid container>
             <Grid item lg={12}>
               <CustomAppBar />
@@ -115,7 +116,9 @@ function HomePage() {
         </Grid>
 
         {/* Right */}
-        <Grid item lg={8}></Grid>
+        <Grid item lg={8}>
+          <Messaging/>
+        </Grid>
       </Grid>
     </Box>
   );
